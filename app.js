@@ -198,7 +198,7 @@ const translations = {
         donate_tag: 'Make a Difference',
         donate_title: 'Donate via <span class="gradient-text" data-i18n="donate_title_accent">QR Code</span>',
         donate_title_accent: 'QR Code',
-        donate_desc: 'Scan the QR code with your banking app to donate directly to hospital relief funds. Every baht counts.',
+        donate_desc: 'Scan the QR code with your banking app to donate directly to hospital relief funds. Every baht counts. Please check correctness before transfer your donation',
         donate_note_title: 'How Donations Work',
         donate_note_desc: 'QR codes link to official PromptPay and hospital donation accounts. Donations go directly to hospital funds for medical supplies, equipment maintenance, and patient care. All donations are tax-deductible under Thai law.',
 
@@ -543,7 +543,7 @@ function createDoughnutChart() {
                     padding: 14,
                     cornerRadius: 10,
                     callbacks: {
-                        label: (ctx) => `${ctx.label}: ฿${ctx.parsed} Million (${Math.round(ctx.parsed / hospitalData.reduce((a,b)=>a+b.debt,0) * 100)}%)`
+                        label: (ctx) => `${ctx.label}: ฿${ctx.parsed} Million (${Math.round(ctx.parsed / hospitalData.reduce((a, b) => a + b.debt, 0) * 100)}%)`
                     }
                 }
             },
